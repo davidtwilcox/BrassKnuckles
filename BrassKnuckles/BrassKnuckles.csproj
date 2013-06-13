@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E86AC7FA-6421-49A7-834F-C36CAB89E239}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BrassKnuckles</RootNamespace>
+    <AssemblyName>BrassKnuckles</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=MSIL" />
+    <Reference Include="Nuclex.Game">
+      <HintPath>..\Nuclex\Nuclex.Game.dll</HintPath>
+    </Reference>
+    <Reference Include="Nuclex.Input">
+      <HintPath>..\Nuclex\Nuclex.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Nuclex.Support">
+      <HintPath>..\Nuclex\Nuclex.Support.dll</HintPath>
+    </Reference>
+    <Reference Include="Nuclex.UserInterface">
+      <HintPath>..\Nuclex\Nuclex.UserInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AI\Actions\Action.cs" />
+    <Compile Include="AI\Actions\ActionCombination.cs" />
+    <Compile Include="AI\Actions\ActionManager.cs" />
+    <Compile Include="AI\Actions\ActionSequence.cs" />
+    <Compile Include="AI\Actions\MoveAction.cs" />
+    <Compile Include="AI\AiComponent.cs" />
+    <Compile Include="AI\AiSystem.cs" />
+    <Compile Include="AI\BehaviorTrees\AlwaysSuccess.cs" />
+    <Compile Include="AI\BehaviorTrees\Decorator.cs" />
+    <Compile Include="AI\BehaviorTrees\FrequencyLimiter.cs" />
+    <Compile Include="AI\BehaviorTrees\Invert.cs" />
+    <Compile Include="AI\BehaviorTrees\MoveTo.cs" />
+    <Compile Include="AI\BehaviorTrees\ParallelTask.cs" />
+    <Compile Include="AI\BehaviorTrees\RandomTask.cs" />
+    <Compile Include="AI\BehaviorTrees\RunCountLimiter.cs" />
+    <Compile Include="AI\BehaviorTrees\Selector.cs" />
+    <Compile Include="AI\BehaviorTrees\Sequence.cs" />
+    <Compile Include="AI\BehaviorTrees\ShuffleSelector.cs" />
+    <Compile Include="AI\BehaviorTrees\ShuffleSequence.cs" />
+    <Compile Include="AI\BehaviorTrees\Task.cs" />
+    <Compile Include="AI\BehaviorTrees\TaskResultCode.cs" />
+    <Compile Include="AI\BehaviorTrees\UntilCount.cs" />
+    <Compile Include="AI\BehaviorTrees\UntilFail.cs" />
+    <Compile Include="AI\BehaviorTrees\UntilSuccess.cs" />
+    <Compile Include="AI\Blackboard.cs" />
+    <Compile Include="Director.cs" />
+    <Compile Include="EntityFramework\ComponentEventArgs.cs" />
+    <Compile Include="EntityFramework\ComponentMapper.cs" />
+    <Compile Include="EntityFramework\ComponentType.cs" />
+    <Compile Include="EntityFramework\Entity.cs" />
+    <Compile Include="EntityFramework\EntityEventArgs.cs" />
+    <Compile Include="EntityFramework\EntityWorld.cs" />
+    <Compile Include="EntityFramework\IComponent.cs" />
+    <Compile Include="EntityFramework\Managers\ComponentTypeManager.cs" />
+    <Compile Include="EntityFramework\Managers\EntityManager.cs" />
+    <Compile Include="EntityFramework\Managers\GroupManager.cs" />
+    <Compile Include="EntityFramework\Managers\IManager.cs" />
+    <Compile Include="EntityFramework\Managers\SystemBitManager.cs" />
+    <Compile Include="EntityFramework\Managers\SystemManager.cs" />
+    <Compile Include="EntityFramework\Managers\TagManager.cs" />
+    <Compile Include="FontManager.cs" />
+    <Compile Include="Geometry\Circle.cs" />
+    <Compile Include="Geometry\RectangleExtension.cs" />
+    <Compile Include="Geometry\Vector2Extension.cs" />
+    <Compile Include="Input\GamePadMatcher.cs" />
+    <Compile Include="Input\IInputMatcher.cs" />
+    <Compile Include="Input\InputBinding.cs" />
+    <Compile Include="Input\InputBindingManager.cs" />
+    <Compile Include="Input\InputManagerExtension.cs" />
+    <Compile Include="Input\KeyMatcher.cs" />
+    <Compile Include="Input\MouseMatcher.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="MessageBoard.cs" />
+    <Compile Include="MessageCodes.cs" />
+    <Compile Include="MovementSystem.cs" />
+    <Compile Include="PositionComponent.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EntityFramework\Systems\DelayedEntitySystem.cs" />
+    <Compile Include="EntityFramework\Systems\EntitySystem.cs" />
+    <Compile Include="EntityFramework\Systems\GroupSystem.cs" />
+    <Compile Include="EntityFramework\Systems\IntervalEntitySystem.cs" />
+    <Compile Include="EntityFramework\Systems\IntervalGroupSystem.cs" />
+    <Compile Include="EntityFramework\Systems\IntervalTagSystem.cs" />
+    <Compile Include="EntityFramework\Systems\ParallelEntitySystem.cs" />
+    <Compile Include="EntityFramework\Systems\ParallelIntervalEntitySystem.cs" />
+    <Compile Include="EntityFramework\Systems\TagSystem.cs" />
+    <Compile Include="Renderer\AnimationComponent.cs" />
+    <Compile Include="Renderer\AnimationSystem.cs" />
+    <Compile Include="Renderer\FrameInfo.cs" />
+    <Compile Include="Renderer\ImageComponent.cs" />
+    <Compile Include="Renderer\RenderSystem.cs" />
+    <Compile Include="TextureManager.cs" />
+    <Compile Include="UI\ControlComponent.cs" />
+    <Compile Include="UI\ControlExtension.cs" />
+    <Compile Include="UI\ControlSystem.cs" />
+    <Compile Include="Utility\ColorHelper.cs" />
+    <Compile Include="Utility\DebugDisplay.cs" />
+    <Compile Include="Utility\Gradient.cs" />
+    <Compile Include="Utility\MathExtension.cs" />
+    <Compile Include="Utility\RandomListHelper.cs" />
+    <Compile Include="Utility\SimpleTexture.cs" />
+    <Compile Include="Utility\TextHelper.cs" />
+    <Compile Include="Utility\Timer.cs" />
+    <Compile Include="VelocityComponent.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
